@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التسجيل متعدد الخطوات</title>
+    <!-- <link rel="stylesheet" href="assest/css/style.css"> -->
+   
+    <link rel="preload" href="assest/css/style.css" as="style" onload="this.rel='stylesheet'">
+   <link rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="illustration">
+             <div class="background-image"></div>
+        </div>
+           
+        <div class="form-container login-box">
+            <h2 id="step-title">خطوات إنشاء بيانات الجامعة</h2>
+            <div class="progress-bar">
+                <div class="progress-step active"></div>
+                <div class="progress-step"></div>
+                <div class="progress-step"></div>
+                <div class="progress-step"></div>
+                <div class="progress-step"></div>
+            </div>
+
+
+            <form id="multi-step-form">
+                <hr>
+
+                <div class="form-step active" id="step-1">
+                    
+                     <h3 class="title-1">بيانات الجامعة الرئيسية</h3> 
+                    <div class="row">
+                        <div class="col">
+                            
+                            <div class="user-box" >
+                                <input type="text" name="" required="">
+                                <label ="name"><i class="fa-solid fa-building-columns"></i>اسم الجامعة</label>
+                              </div>
+                          
+                        
+                            
+                        </div>
+                        <div class="col">
+
+                            <div class="user-box">
+                                <input type="text" id="lastName" required="">
+                                <label><i class="fa-regular fa-user"></i> مدير الجامعة</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-ranking-star"></i>الترتيب   </label>
+                    </div>
+                    
+                     
+
+                    <div class="form-group user-box">
+                        <input type="date" id="datePicker" required>
+                        <label ><i class="fa-solid fa-calendar-days"></i>تاريخ التأسيس   </label>
+                        
+                    </div> 
+                      
+                   <!--  -->
+                 
+
+                    <!--  -->
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group user-box category">
+                                <label >التصنيف</label>                        
+        
+                                <select id="categorySelect" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="category1">تصنيف1</option>
+                                    <option value="category2">تصنيف2</option>
+                                    
+                                </select>
+                               
+                            </div> 
+                                    
+                        </div>
+                        <div class="col">    
+                            <div class="form-group ">
+                                
+                                <input type="file" id="imageUpload" accept="image/*" required>
+                                <label for="imageUpload" class="upload-button">
+                                    <i class="fa-solid fa-image"></i>أضافة صورة 
+                                </label>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                      
+                  
+
+                </div>
+
+
+
+
+                <div class="form-step" id="step-2">
+
+                    
+                       <h3 class="title-1">بيانات الجامعة الرئيسية</h3> 
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    
+                                    <div class="user-box" >
+                                        <input type="text" name="" required="">
+                                        <label ="name"><i class="fa-regular fa-building"></i>نوع الجامعة</label>
+                                      </div>
+                                  
+                                
+                                    
+                                </div>
+                                <div class="col">
+        
+                                    <div class="user-box">
+                                        <input type="text" id="lastName" required="">
+                                        <label><i class="fa-solid fa-location-dot"></i> المدينة</label>
+                                    </div>
+                                </div>
+                            </div>
+        
+                         </div>
+
+
+                    <div class="form-group">
+                        <div class="user-box" >
+                            <textarea  id="comments" rows="4"  required>
+                            </textarea>
+                             <label ="name"><i class="fa-solid fa-address-card"></i>العنوان التفصيلي</label>
+                         </div>         
+                    </div>
+                    <div class="form-group ">
+                            
+                        <div class="card">
+                            <h3 class="title-2">إضافة الكليات</h3>
+                            <div class="input-container">
+                                <input type="text" class="input-field" placeholder="أدخل اسماً واضغط Enter">
+                                <button class="add-button">إضافة</button>
+                            </div>
+                            <div class="tags-container"></div>
+                            <div class="counter"></div>
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+                <div class="form-step" id="step-3">
+                    
+                    <h3 class="title-1">بيانات التواصل</h3> 
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                
+                                <div class="user-box">
+                                    <input type="text" id="lastName" required="">
+                                    <label><i class="fa-regular fa-envelope"></i> البريد الإلكتروني</label>
+                                </div>                            
+                                
+                            </div>
+                            <div class="col">                                
+                                <div class="user-box" >
+                                    <input type="text" name="" required="">
+                                    <label ="name"><i class="fa-solid fa-phone-flip"></i>الهاتف الرئيسي</label>
+                                  </div>
+                            </div>
+                        </div>
+    
+                     </div>
+                    <div class="form-group">
+                        <div class="card">
+                            <h3 class="title-2"><i class="fa-solid fa-share-nodes"></i>روابط وسائل التواصل الاجتماعي</h3>
+                            <div class="input-container">
+                                <input type="text" class="input-field">
+                                <button class="add-button">إضافة</button>
+                            </div>
+                            <div class="tags-container"></div>
+                            <div class="counter"></div>
+                        </div>
+                 
+                    </div>
+                   
+                </div>
+
+
+
+                <div class="form-step" id="step-4">
+                    <h3 class="title-1">الإحصائيات</h3> 
+
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-globe"></i>نسبة الطلاب الدوليين   </label>
+                    </div>
+                    
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-circle-check"></i>نسبة النجاح الأكاديمي   </label>
+                    </div>
+                    
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-people-group"></i>عدد الطلاب لكل تخصص   </label>
+                    </div>
+                    
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-regular fa-user"></i>عدد الطلاب الحاليين   </label>
+                    </div>
+                    
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-user-group"></i>أجمالي عدد الطلاب    </label>
+                    </div>
+                    
+                    <div class="form-group user-box">
+                        <input type="text" id="rank" required>
+                        <label ><i class="fa-solid fa-graduation-cap"></i>عدد الخريجين سنويا   </label>
+                    </div>
+              
+                </div>
+                <div class="form-step" id="step-5">
+                    <h3 class="title-2">اكتمل التسجيل!</h3>
+                    <p class="title-1">شكرا لتسجيلك. تم إنشاء حسابك بنجاح.</p>
+                </div>
+                <div class="nav-buttons">
+                    <button type="button" id="prev-btn" class="nav-btn prev-btn"><i class="fa-solid fa-angle-right" style="color: #763626;"></i></button>
+                    <button type="button" id="next-btn" class="nav-btn next-btn"><i class="fa-solid fa-angle-left " style="color: #763626;"></i></button>
+                </div>                                                                                                               
+        </div>
+    </div>
+    <script src="assest/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
